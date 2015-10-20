@@ -13,3 +13,7 @@ div#divShowList {
 div#showNewAutocomplete {
   display: none;
 }
+
+button.save {
+  margin-left: 10px;
+}

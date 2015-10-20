@@ -9,19 +9,22 @@
 </head>
 <body>
   <div class="container">
-      <label for="fruit">Basic code with hard-coded [Apple, Banana, Orange]</label>
-      <br>
-      <input name="fruit" type="text" onkeyup="showAutocomplete('input[name=fruit]',['Apple', 'Banana', 'Orange'], 'result');">
-      <div id="result"></div>
+      <div>
+        <label for="fruit">Basic code with hard-coded [Apple, Banana, Orange]</label>
+        <br>
+        <input name="fruit" type="text" id="fruit" onkeyup="showAutocomplete('input[name=fruit]',['Apple', 'Banana', 'Orange'], 'result');">
+        <div id="result"></div>
+      </div>
+      
       <hr>
 
-      <div id="createList">
+      <div id="divCreateList">
         <h4>Let's create your own list!</h4>
-        <label for="list">Enter an item</label>
+        <label for="createList">Enter an item</label>
         <br>
-        <input name="list" id="list" type="text"> 
-        <button class="btn btn-primary btn-xs" onclick="createList();">Save to the list</button> <button class="btn btn-primary btn-xs" id="done" onclick="showCreatedList();">Done creating the list</button>
-        <div id="showListDiv"></div>  
+        <input name="createList" id="createList" type="text"> 
+        <button class="btn btn-primary btn-sm save" onclick="createList('input[name=createList]');">Save</button> <button class="btn btn-primary btn-sm" id="done" onclick="showCreatedList();">Done</button>
+        <div id="showCreatedList"></div>  
       </div>
       <div id="divShowList">
         <label for="showList">Search from your own creation:</label>
