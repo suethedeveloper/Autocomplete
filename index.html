@@ -2,11 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Auto-complete component</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
   <script src="app.js"></script>
 </head>
 <body>
-  <input name="name" type="text" onkeyup="showAutocomplete();"></input>
-  <div id="result"></div>
+  <div class="container">
+      <label for="fruit">Basic code with hard-coded [Apple, Banana, Orange]</label>
+      <br>
+      <input name="fruit" type="text" onkeyup="showAutocomplete('input[name=fruit]',['Apple', 'Banana', 'Orange'], 'result');">
+      <div id="result"></div>
+      <hr>
+
+      <div id="createList">
+        <h4>Let's create your own list!</h4>
+        <label for="list">Enter an item</label>
+        <br>
+        <input name="list" id="list" type="text"> 
+        <button class="btn btn-primary btn-xs" onclick="createList();">Save to the list</button> <button class="btn btn-primary btn-xs" id="done" onclick="showCreatedList();">Done creating the list</button>
+        <div id="showListDiv"></div>  
+      </div>
+      <div id="divShowList">
+        <label for="showList">Search from your own creation:</label>
+        <br>
+        <input name="showList" id="showList" type="text" onkeyup="showAutocomplete('input[name=showList]',[], 'showListResult');">
+        <div id="showListResult"></div>        
+      </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,15 @@
+.container, div#result {
+  margin-top: 15px;
+}
+
+div#createList {
+  display: block;
+}
+
+div#divShowList {
+  display: none;
+}
+
+div#showNewAutocomplete {
+  display: none;
+}
